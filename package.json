@@ -1,8 +1,9 @@
 {
   "name": "@hitomihiumi/colors.ts",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "remake of colors.js on TS",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "tsc ./test/test.ts && node ./test/test.js"

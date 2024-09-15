@@ -84,7 +84,7 @@ declare global {
         bgWhite: string;
 
         reset: string;
-        // @ts-ignore
+        //@ts-ignore
         bold: string;
         dim: string;
         italic: string;
