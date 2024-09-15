@@ -5,9 +5,10 @@
 
 ![Demo](https://raw.githubusercontent.com/Marak/colors.js/master/screenshots/colors.png)
 
-## Installation
+## Get Started
 
-    npm install colors
+1. Install the module by using `npm i @hitomihiumi/colors.ts`
+2. Enjoy!
 
 ## colors and styles!
 
