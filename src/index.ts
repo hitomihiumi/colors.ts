@@ -15,6 +15,14 @@ export interface Color {
     gray: Color;
     grey: Color;
 
+    brightRed: Color;
+    brightGreen: Color;
+    brightYellow: Color;
+    brightBlue: Color;
+    brightMagenta: Color;
+    brightCyan: Color;
+    brightWhite: Color;
+
     bgBlack: Color;
     bgRed: Color;
     bgGreen: Color;
@@ -57,6 +65,14 @@ declare global {
         white: string;
         gray: string;
         grey: string;
+
+        brightRed: string;
+        brightGreen: string;
+        brightYellow: string;
+        brightBlue: string;
+        brightMagenta: string;
+        brightCyan: string;
+        brightWhite: string;
 
         bgBlack: string;
         bgRed: string;

@@ -1,6 +1,6 @@
 {
   "name": "@hitomihiumi/colors.ts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "remake of colors.js on TS",
   "main": "index.js",
   "scripts": {

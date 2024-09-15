@@ -9,7 +9,7 @@
     "strict": true,
     "skipLibCheck": true,
     "resolveJsonModule": true,
-    "types": ["./src/index.d.ts", "node"]
+    "types": ["node"]
   },
   "include": [
     "src/**/*"
