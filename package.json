@@ -1,0 +1,31 @@
+{
+  "name": "@hitomihiumi/colors.ts",
+  "version": "1.0.0",
+  "description": "remake of colors.js on TS",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc ./test/test.ts && node ./test/test.js"
+  },
+  "keywords": [
+    "colors",
+    "ansi",
+    "terminal"
+  ],
+  "author": "Marak Squires, hitomihiumi",
+  "homepage": "https://github.com/hitomihiumi/colors.ts",
+  "bugs": "https://github.com/hitomihiumi/colors.ts/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hitomihiumi/colors.ts.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "util": "^0.12.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.5",
+    "assert": "^2.1.0",
+    "typescript": "^5.4.5"
+  }
+}
