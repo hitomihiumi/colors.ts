@@ -1,12 +1,13 @@
 {
   "name": "@hitomihiumi/colors.ts",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "remake of colors.js on TS",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "test": "tsc ./test/test.ts && node ./test/test.js"
+    "test": "tsc ./test/test.ts && node ./test/test.js",
+    "test:theme": "tsc ./test/test-theme.ts && node ./test/test-theme.js"
   },
   "keywords": [
     "colors",

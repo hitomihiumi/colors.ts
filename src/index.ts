@@ -103,7 +103,5 @@ declare global {
     }
 }
 
-require('./extendStringPrototype')();
-
 import { colors } from "./colors";
 export { colors }

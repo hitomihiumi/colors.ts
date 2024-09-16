@@ -175,4 +175,6 @@ for (const map in colors.maps) {
 
 defineProps(colors, init());
 
+require('./extendStringPrototype')();
+
 export { colors };

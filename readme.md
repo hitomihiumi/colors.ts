@@ -1,88 +1,79 @@
 <a href="https://www.npmjs.com/package/@hitomihiumi/colors.ts"><img src="https://img.shields.io/npm/v/@hitomihiumi/colors.ts.svg?maxAge=3600" alt="npm version" /></a>
 <a href="https://www.npmjs.com/package/@hitomihiumi/colors.ts"><img src="https://img.shields.io/npm/dt/@hitomihiumi/colors.ts.svg?maxAge=3600" alt="npm downloads" /></a>
 
-## get color and style in your node.js console
-
-![Demo](https://raw.githubusercontent.com/Marak/colors.js/master/screenshots/colors.png)
-
 ## Get Started
 
 1. Install the module by using `npm i @hitomihiumi/colors.ts`
 2. Enjoy!
 
-## colors and styles!
+## Colors
 
 ### text colors
 
-- black
-- red
-- green
-- yellow
-- blue
-- magenta
-- cyan
-- white
-- gray
-- grey
+- `black`
+- `red`
+- `green`
+- `yellow`
+- `blue`
+- `magenta`
+- `cyan`
+- `white`
+- `gray`
+- `grey`
 
 ### bright text colors
 
-- brightRed
-- brightGreen
-- brightYellow
-- brightBlue
-- brightMagenta
-- brightCyan
-- brightWhite
+- `brightRed`
+- `brightGreen`
+- `brightYellow`
+- `brightBlue`
+- `brightMagenta`
+- `brightCyan`
+- `brightWhite`
 
 ### background colors
 
-- bgBlack
-- bgRed
-- bgGreen
-- bgYellow
-- bgBlue
-- bgMagenta
-- bgCyan
-- bgWhite
-- bgGray
-- bgGrey
+- `bgBlack`
+- `bgRed`
+- `bgGreen`
+- `bgYellow`
+- `bgBlue`
+- `bgMagenta`
+- `bgCyan`
+- `bgWhite`
+- `bgGray`
+- `bgGrey`
 
 ### bright background colors
 
-- bgBrightRed
-- bgBrightGreen
-- bgBrightYellow
-- bgBrightBlue
-- bgBrightMagenta
-- bgBrightCyan
-- bgBrightWhite
+- `bgBrightRed`
+- `bgBrightGreen`
+- `bgBrightYellow`
+- `bgBrightBlue`
+- `bgBrightMagenta`
+- `bgBrightCyan`
+- `bgBrightWhite`
 
 ### styles
 
-- reset
-- bold
-- dim
-- italic
-- underline
-- inverse
-- hidden
-- strikethrough
+- `reset`
+- `bold`
+- `dim`
+- `italic`
+- `underline`
+- `inverse`
+- `hidden`
+- `strikethrough`
 
 ### extras
 
-- rainbow
-- zebra
-- america
-- trap
-- random
-
+- `rainbow`
+- `zebra`
+- `america`
+- `trap`
+- `random`
 
 ## Usage
-
-By popular demand, `colors` now ships with two types of usages!
-
-The super nifty way
 
 ```ts
 import '@hitomihiumi/colors.ts';
@@ -94,9 +85,13 @@ console.log('OMG Rainbows!'.rainbow); // rainbow
 console.log('Run the trap'.trap); // Drops the bass
 ```
 
-I prefer the first way. Some people seem to be afraid of extending `String.prototype` and prefer the second way.
+## Important Notes
 
-If you are writing good code you will never have an issue with the first approach. If you really don't want to touch `String.prototype`, the second usage will not touch `String` native object.
+Specify the `bold` argument only after all style labels, otherwise you will get an error (applies to TS only) 
+
+```ts
+console.log('hello'.green.bold);
+```
 
 ## Enabling/Disabling Colors
 
@@ -115,27 +110,19 @@ FORCE_COLOR=1 node myapp.js
 
 Or in code:
 
-```javascript
-var colors = require('colors');
+```ts
+import { colors } from '@hitomihiumi/colors.ts';
+
 colors.enable();
 colors.disable();
-```
-
-## Console.log [string substitution](http://nodejs.org/docs/latest/api/console.html#console_console_log_data)
-
-```js
-var name = 'Marak';
-console.log(colors.green('Hello %s'), name);
-// outputs -> 'Hello Marak'
 ```
 
 ## Custom themes
 
 ### Using standard API
 
-```js
-
-var colors = require('colors');
+```ts
+import { colors } from '@hitomihiumi/colors.ts';
 
 colors.setTheme({
   silly: 'rainbow',
@@ -149,6 +136,21 @@ colors.setTheme({
   debug: 'blue',
   error: 'red'
 });
+
+declare global {
+  interface String {
+    silly: string;
+    input: string;
+    verbose: string;
+    prompt: string;
+    info: string;
+    data: string;
+    help: string;
+    warn: string;
+    debug: string;
+    error: string;
+  }
+}
 
 // outputs red text
 console.log("this is an error".error);
@@ -157,45 +159,20 @@ console.log("this is an error".error);
 console.log("this is a warning".warn);
 ```
 
-### Using string safe API
-
-```js
-var colors = require('colors/safe');
-
-// set single property
-var error = colors.red;
-error('this is red');
-
-// set theme
-colors.setTheme({
-  silly: 'rainbow',
-  input: 'grey',
-  verbose: 'cyan',
-  prompt: 'grey',
-  info: 'green',
-  data: 'grey',
-  help: 'cyan',
-  warn: 'yellow',
-  debug: 'blue',
-  error: 'red'
-});
-
-// outputs red text
-console.log(colors.error("this is an error"));
-
-// outputs yellow text
-console.log(colors.warn("this is a warning"));
-
-```
-
 ### Combining Colors
 
-```javascript
-var colors = require('colors');
+```ts
+import { colors } from '@hitomihiumi/colors.ts';
 
 colors.setTheme({
   custom: ['red', 'underline']
 });
+
+declare global {
+    interface String {
+        custom: string;
+    }
+}
 
 console.log('test'.custom);
 ```

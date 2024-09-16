@@ -1,5 +1,5 @@
-var assert = require('assert');
 import { colors } from "../dist";
+var assert = require('assert');
 
 var s = 'string';
 
@@ -89,4 +89,4 @@ assert.equal(colors.custom(s),
     '\x1b[7m' + '\x1b[3m' + '\x1b[31m' + s +
     '\x1b[39m' + '\x1b[23m' + '\x1b[27m' );
 
-console.log('All tests passed.'.green);
+console.log('All tests passed.'.green.bold);
